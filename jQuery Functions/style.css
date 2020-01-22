@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+.container{
+    width: 970px;
+    height: 1300px;
+    margin: auto;
+    background-color:black;
+}
+.banner{
+    width: 950px;
+    height: 200px;
+    margin: 10px;
+    padding-top: 10px;
+    background-color:#1f2327;
+}
+h1{
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid #06aae2;
+}
+p{
+    color: white;
+    padding: 15px;
+}
+#dojo{
+    width: 300px;
+    margin-left: 335px;
+    display: inline-block;
+}
+#show_img{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: #06aae2;
+    margin: auto;
+}
+.main_content{
+    width: 950px;
+    height: 700px;
+    margin: 10px;
+    background-color:#1f2327;
+}
+#code{
+    width: 280px;
+    margin: 40px 0 0 340px;
+    display: inline-block;
+}
+h4{
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+h3{
+    color: white;
+    padding-top: 15px;
+    text-align: center;
+    text-decoration: underline;
+}
+a{
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+}
+h2{
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+h5{
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+textarea{
+    padding: 15px;
+    width: 200px;
+    height: 100px;
+    margin: 40px 0 0 360px;
+}
+#submit{
+    background-color: #06aae2;
+    color: white;
+    width: 100px;
+    display: block;
+    margin: auto;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>jQuery Functions</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $(".banner h1").click(function(){
+                $(this).hide();
+            })
+            
+            $(".banner p").click(function(){
+                $(".banner h1").show();
+            })
+
+            $("#show_img").click(function(){
+                $("#dojo").toggle(function(){
+                    if($("#show_img").text() == "Click to see our logo!"){
+                        $("#show_img").text("Goodbye"); 
+                    }
+                    else{$("#show_img").text("Click to see our logo!");
+                    }
+                })
+            })
+
+            $(".main_content p").hide();
+            
+            $(".main_content h1").click(function(){
+                $(".main_content p").slideDown();
+            })
+
+            $(".main_content p").click(function(){
+                $(".main_content p").slideUp();
+            })
+
+            $(".main_content h4").click(function(){
+                $("#code").slideToggle();
+            })
+
+            $("#code").click(function(){
+                $("#code").fadeOut(1000);
+                $(".main_content a").addClass("showable");
+            })
+
+            $(".main_content a").hide();
+
+            $(".main_content h3").click(function(){
+                $(".showable").fadeIn(1000);
+            })
+
+            $("#dojo").click(function(){
+                $("#dojo").before("<h2>Coding Dojo Rules!</h2>");
+                $("#dojo").after("<h2>I know right!?</h2>");
+            })
+
+            $(".banner h1").click(function(){
+                $(".banner p").append(" Howdy Folks, welcome to Coding Dojo!");
+            })
+
+            $(".main_content h3").click(function(){
+                $(".banner p").html("<p>We cover a variety of coding languages in our online program.  If you have any questions, please reach out to us!</p>")
+            })
+
+            $(".main_content h3").click(function(){
+                if($("#code").attr("src") == "thedojo.jpg"){
+                    $("#code").attr("src", "code.jpg");
+                    $("textarea").val("Coding rocks!");
+                }
+                else{$("#code").attr("src", "thedojo.jpg");
+                    $("textarea").val("Coding Dojo rules!");
+                }
+            })
+        });
+        </script>
+    <body>
+        <div class="container">
+            <div class="banner">
+                <h1>Why Online?</h1>
+                <p>Our online campus is a remote learning alternative that provides online access to both our full-time and part-time bootcamp options. It is ideal for students interested in web development who cannot attend our on-site campus programs or commit to a full-time program. Our online bootcamps come complete with a real-time support from instructors, live lectures, 24/7 access to our industry-tested learning platform, hands-on real-life projects, comprehensive career services assistance, and much more.</p>
+            </div>
+            <img src="codingdojo.jpg" alt="A logo of Coding Dojo" id="dojo">
+            <button id="show_img">Goodbye!</button>
+            <div class="main_content">
+                <h1>About Us</h1>
+                <p>Today, Coding Dojo is the first school in the world to teach three full stacks of software development in 14 weeks: an ability only acquirable through years of refinement and only enabled by a staff of seasoned web developers through decades of programming experience. Our commitment to quality has produced a polished curriculum and well-rounded course structure, which we continue to improve with every new cohort. Given the rapid growth of technology, we believe that our school must act likewise: to be adaptive, versatile, and most of all highly relevant.</p>
+                <img src="code.jpg" alt="A picture of code" id="code">
+                <h4>Click here to learn more about coding!</h4>
+                <h3>Contact Us</h3>
+                <a href="coding_dojo">www.codingdojo.com</a>
+                <textarea>Please feel free to leave comments.</textarea>
+                <button id="submit">Submit</button>
+            </div>
+        </div>
+    </body>
+</html>
